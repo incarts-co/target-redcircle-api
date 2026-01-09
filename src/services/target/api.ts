@@ -580,13 +580,13 @@ export function generateProductUrl(tcin: string): string {
 }
 
 /**
- * Validate TCIN format (8 digits)
+ * Validate TCIN format (8-10 digits)
  *
  * @param tcin - TCIN to validate
  * @returns True if valid
  */
 export function isValidTcin(tcin: string): boolean {
-  return /^\d{8}$/.test(tcin);
+  return /^\d{8,10}$/.test(tcin);
 }
 
 // ============================================================================

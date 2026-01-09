@@ -37,7 +37,7 @@ export async function getProductByTcin(
     // Validate TCIN format
     if (!tcin || !isValidTcin(tcin)) {
       throw new ValidationError(
-        'Invalid TCIN format. Must be 8 digits.',
+        'Invalid TCIN format. Must be 8-10 digits.',
         'tcin',
         { tcin },
       );
